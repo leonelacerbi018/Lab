@@ -1,0 +1,39 @@
+import random
+pasoscr1 = 0
+sumacr1 = 0
+sumacr2 = 0
+pasoscr2 = 0
+segundos = 0
+meta = 50
+print("Carrera de 50 pasos")
+
+while True:
+    segundos = segundos + 1
+    pasoscr1 = random.randint(1,5)
+    sumacr1 = sumacr1 + pasoscr1
+    sumacr2 = sumacr2 + pasoscr2
+    pasoscr2 = random.randint(1,5)
+    if pasoscr1 > pasoscr2:
+        print("El Corredor 1 va primero con", sumacr1, " pasos")
+    elif pasoscr2 > pasoscr1:
+        print("El Corredor 2 va primero con", sumacr2, " pasos")
+    else:
+        print("Ambos van empatados con", sumacr1, " pasos")
+    
+    if sumacr1 >= meta or sumacr2 >= meta:
+        break
+
+print("Resultados")
+
+if sumacr1 >= meta and sumacr2 >= meta:
+    if sumacr1 > sumacr2:
+        print("¡El Corredor 1 ganó la carrera en ", segundos,"segundos")
+    elif sumacr2 > sumacr1:
+        print("¡El Corredor 2 ganó la carrera en ", segundos,"segundos")
+    else:
+        print("¡Es un empate! Ambos llegaron a ", sumacr1, "pasos.")
+elif sumacr1 >= meta:
+    print("¡El Corredor 1 ganó la carrera en ", segundos,"segundos")
+else:
+    print("¡El Corredor 2 ganó la carrera en ", segundos,"segundos")
+    
