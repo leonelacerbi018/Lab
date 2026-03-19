@@ -1,0 +1,6 @@
+cadena = input("Ingresa una cadena de texto: ")
+letra = input("Ingresa la letra para contar: ")
+
+cantidad = cadena.count(letra)
+
+print("La letra", letra, " aparece", cantidad, " veces en el texto.")
