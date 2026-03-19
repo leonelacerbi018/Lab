@@ -1,0 +1,19 @@
+import random
+
+numsecreto = random.randint(1,1000000)
+
+opcion = 3
+print("1. Escribir número")
+print("2. Salir")
+opcion = int(input("Elija una opción: "))
+while(opcion != 2):
+    num = int(input("Ingrese un número: "))
+    if(num < numsecreto):
+        print("El número secreto es mayor que el ingresado")
+    elif(num > numsecreto):
+        print("El número secreto es menor que el ingresado")
+    elif(num == numsecreto):
+        print("Encontraste el número secreto")
+        break
+    else:
+        print("Error, ingreso inválido")
