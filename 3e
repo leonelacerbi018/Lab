@@ -1,0 +1,17 @@
+producto = 1
+contador = 0
+
+while True:
+    numero = int(input("Ingrese un número entero positivo (o negativo para terminar): "))
+    
+    if numero < 0:
+        break
+        
+    if numero > 0:
+        producto = producto * numero
+        contador = contador + 1
+
+if contador > 0:
+    print("El producto de los números ingresados es:", producto)
+else:
+    print("No se ingresaron números positivos para calcular.")
