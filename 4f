@@ -1,0 +1,19 @@
+import random
+
+secreto = random.randint(1, 100)
+adivinado = 0
+
+print("Se generó un numero entre 1 y 100")
+
+while adivinado != secreto:
+    entrada = input("Ingresa tu numero: ")
+    adivinado = int(entrada)
+    
+    if adivinado < secreto:
+        print("El numero secreto es mayor.")
+    elif adivinado > secreto:
+        print("El numero secreto es menor.")
+    else:
+        print("Has ganado")
+
+print("Fin del juego.")
