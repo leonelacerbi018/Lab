@@ -1,0 +1,15 @@
+cantidad_texto = input("Indica la cantidad de numeros: ")
+cantidad = int(cantidad_texto)
+numeros = []
+
+for i in range(cantidad):
+    valor = input("Ingresa un numero: ")
+    numeros.append(int(valor))
+
+suma_acumulada = 0
+for n in numeros:
+    suma_acumulada = suma_acumulada + n
+
+promedio = suma_acumulada / cantidad
+
+print("La media es: ", promedio)
