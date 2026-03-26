@@ -1,0 +1,13 @@
+cantidad_texto = input("Indica la cantidad de numeros: ")
+cantidad = int(cantidad_texto)
+numeros = []
+
+for i in range(cantidad):
+    valor = input("Ingresa un numero: ")
+    numeros.append(int(valor))
+
+suma_total = 0
+for n in numeros:
+    suma_total = suma_total + n
+
+print("La suma total es:", suma_total)
