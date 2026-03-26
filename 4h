@@ -1,0 +1,35 @@
+import random
+
+palabras = ["alakazam", "factura", "nazi", "puerta", "laboratorio"]
+indice_azar = random.randint(0, 4)
+palabra_secreta = palabras[indice_azar]
+
+adivinado = []
+for letra in palabra_secreta:
+    adivinado.append("_")
+
+letras_restantes = 0
+for letra in palabra_secreta:
+    letras_restantes = letras_restantes + 1
+
+print("Adivina la palabra: ", adivinado)
+
+while letras_restantes > 0:
+    posicion_texto = input("¿En que posicion quieres probar? (empieza en 0): ")
+    posicion = int(posicion_texto)
+    
+    letra_usuario = input("Introduce la letra: ")
+    
+    if letra_usuario == palabra_secreta[posicion]:
+        if adivinado[posicion] == "_":
+            adivinado[posicion] = letra_usuario
+            letras_restantes = letras_restantes - 1
+            print("Correcto")
+        else:
+            print("Esa posicion ya estaba adivinada.")
+    else:
+        print("Error: Letra incorrecta en esa posicion.")
+        
+    print("Palabra actual: ", adivinado)
+
+print("Has completado la palabra")
