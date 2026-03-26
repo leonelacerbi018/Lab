@@ -1,0 +1,40 @@
+import random
+import time
+
+cantidad = 5
+numeros = []
+
+for i in range(cantidad):
+    numeros.append(random.randint(1, 99))
+
+print("Memoriza estos numeros:")
+print(numeros)
+
+time.sleep(3)
+
+print("                      ")
+print("                      ")
+print("                      ")
+print("                      ")
+print("                      ")
+print("                      ")
+print("                      ")
+print("                      ")
+print("                      ")
+
+print("Tiempo, ingresa los numeros en orden.")
+
+gano = 1
+for i in range(cantidad):
+    print("Posicion:")
+    print(i)
+    respuesta = int(input())
+    
+    if respuesta != numeros[i]:
+        gano = 0
+        break
+
+if gano == 1:
+    print("Ganaste")
+else:
+    print("Perdiste")
