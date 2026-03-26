@@ -1,0 +1,14 @@
+cantidad_texto = input("Indica la cantidad de numeros: ")
+cantidad = int(cantidad_texto)
+numeros = []
+
+for i in range(cantidad):
+    valor = input("Ingresa un numero: ")
+    numeros.append(int(valor))
+
+maximo = numeros[0]
+for n in numeros:
+    if n > maximo:
+        maximo = n
+
+print("El elemento maximo es:", maximo)
