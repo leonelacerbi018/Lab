@@ -1,0 +1,27 @@
+import random
+
+print("Opciones: piedra, papel, tijera")
+
+usuario = input("Ingresa tu eleccion: ")
+
+azar = random.randint(1, 3)
+
+if azar == 1:
+    computadora = "piedra"
+elif azar == 2:
+    computadora = "papel"
+else:
+    computadora = "tijera"
+
+print("La computadora eligio: ", computadora)
+
+if usuario == computadora:
+    print("Es un empate.")
+elif usuario == "piedra" and computadora == "tijera":
+    print("¡Ganaste! Piedra gana a tijera.")
+elif usuario == "papel" and computadora == "piedra":
+    print("¡Ganaste! Papel gana a piedra.")
+elif usuario == "tijera" and computadora == "papel":
+    print("¡Ganaste! Tijera gana a papel.")
+else:
+    print("Perdiste. La computadora gana")
