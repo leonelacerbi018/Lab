@@ -1,0 +1,14 @@
+cantidad_texto = input("Indica la cantidad de numeros: ")
+cantidad = int(cantidad_texto)
+numeros = []
+
+for i in range(cantidad):
+    valor = input("Ingresa un numero: ")
+    numeros.append(int(valor))
+
+minimo = numeros[0]
+for n in numeros:
+    if n < minimo:
+        minimo = n
+
+print("El elemento minimo es: ", minimo)
