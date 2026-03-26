@@ -1,0 +1,39 @@
+import random
+
+palabras = ["gato", "perro", "casa", "sol", "luna"]
+indice = random.randint(0, 4)
+secreta = palabras[indice]
+
+adivinado = []
+largo = 0
+for letra in secreta:
+    adivinado.append("_")
+    largo = largo + 1
+
+adivinado[0] = secreta[0]
+letras_faltantes = largo - 1
+
+print("Adivina la palabra:")
+print(adivinado)
+
+while letras_faltantes > 0:
+    letra_usuario = input("Ingresa una letra: ")
+    
+    acierto = 0
+    posicion = 0
+    for letra_real in secreta:
+        if letra_usuario == letra_real:
+            if adivinado[posicion] == "_":
+                adivinado[posicion] = letra_usuario
+                letras_faltantes = letras_faltantes - 1
+                acierto = 1
+        posicion = posicion + 1
+    
+    if acierto == 1:
+        print("Bien")
+    else:
+        print("Error")
+        
+    print(adivinado)
+
+print("Ganaste")
