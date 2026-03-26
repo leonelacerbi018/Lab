@@ -1,0 +1,14 @@
+cantidad_texto = input("Indica la cantidad de numeros: ")
+cantidad = int(cantidad_texto)
+numeros = []
+
+for i in range(cantidad):
+    valor = input("Ingresa un numero: ")
+    numeros.append(int(valor))
+
+contador_pares = 0
+for n in numeros:
+    if n % 2 == 0:
+        contador_pares = contador_pares + 1
+
+print("La cantidad de elementos pares es: ", contador_pares)
